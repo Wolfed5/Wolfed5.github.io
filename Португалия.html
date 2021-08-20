@@ -1,0 +1,564 @@
+﻿<!DOCTYPE> 
+<html>
+<head>
+<title>Португалия</title>
+<style>
+td.button {cursor: pointer;}
+a.button {display:block; height:100%; width:100%;}
+a{text-decoration:none;}
+img {
+border: 3px solid black;
+}
+p {padding: 3px 3px 3px; 
+text-indent: 25px; 
+border: 2px solid brown;
+}
+h1 {
+color: indigo;
+}
+h2{
+color: c7d27b;
+}
+h3{
+font-style: italic;
+color: red;
+}
+h4{
+color: marine;
+}
+
+#slider {
+    position:relative;
+}
+</style>
+
+
+
+
+<style type="text/css"> 
+@import url("styles.css");
+
+
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+@keyframes fadeIm-1
+{
+    from    { opacity: 1; }
+    16%     { opacity: 1; }
+    25%     { opacity: 0; }
+    91%     { opacity: 0; }
+    to      { opacity: 1; }
+}
+ 
+@keyframes fadeIm-2
+{
+    from    { opacity: 0; }
+    16%     { opacity: 0; }
+    25%     { opacity: 1; }
+    41%     { opacity: 1; }
+    50%     { opacity: 0; }
+    to      { opacity: 0; }
+}
+ 
+@keyframes fadeIm-3
+{
+    from    { opacity: 0; }
+    41%     { opacity: 0; }
+    50%     { opacity: 1; }
+    66%     { opacity: 1; }
+    78%     { opacity: 0; }
+    to      { opacity: 0; }
+}
+@keyframes fadeIm-4
+{
+    from    { opacity: 0; }
+    50%     { opacity: 0; }
+    66%     { opacity: 1; }
+    75%     { opacity: 1; }
+    88%     { opacity: 0; }
+    to      { opacity: 0; }
+} 
+
+.div-style
+{
+    position: relative; 
+    text-align: center; 
+    width: 99%; 
+}
+ 
+.img-style
+{
+    width: 100%;
+    margin-top: 8px;
+    border: 1px solid #000000;
+     
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+ 
+.img-style.next
+{
+    position: absolute;
+    left: 0%;
+    opacity: 0;
+}
+ 
+.img-style.im-1
+{ 
+    animation-name: fadeIm-1;
+}
+ 
+.img-style.next.im-2
+{ 
+    animation-name: fadeIm-2;
+}
+ 
+.img-style.next.im-3
+{
+    animation-name: fadeIm-3;
+}
+.img-style.next.im-4
+{
+    animation-name: fadeIm-4;
+}
+.div-style,
+.div-style * {
+	box-sizing: border-box;
+}
+.div-style {
+  position: relative; 
+  display: inline-block; 
+  overflow: hidden; 
+  max-width: 100%; 
+  height: auto; 
+}
+
+.div-style img {
+	max-width: 100%;
+}
+.div-style .bottom {
+	display: inline-block;
+}
+.div-style .very {
+	opacity: 0;
+	position: absolute;
+	top: 50;
+	left: 0;
+	right: 0;
+	bottom: 150;
+	width: 100%;
+	height: 100%;	
+	-moz-transition: all 0.8s ease-in-out 0s;
+	-webkit-transition: all 0.8s ease-in-out 0s;
+	-ms-transition: all 0.8s ease-in-out 0s;
+	transition: all 0.8s ease-in-out 0s;
+}
+.div-style:hover .very,
+.div-style.active .very {
+	opacity: 1;
+}
+
+.div-style .text {
+	text-align: center;
+	font-size: 18px;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.div-style .mobile {
+	font-size: 6px;
+	border-top: 1px solid rgb(179, 179, 179); 
+	border-top: 1px solid rgba(179, 179, 179, 0.7);
+	margin-top: 5px;
+	padding-top: 2px;
+	display: none;
+}
+.div-style.active .mobile {
+	display: block;
+}
+
+.div-style .scale {
+	border-radius: 40%;
+	-moz-transform: scale(0);
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+}
+.div-style:hover .scale,
+.div-style.active .scale {
+	border-radius: 40%;
+	-moz-transform: scale(1);
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+.div-style.text{
+    position: relative; 
+    text-align: center; 
+    width: 99%; 
+}
+
+</style>
+<style>
+.tee{
+display:inline-block;  
+padding:5px 13px!important;
+margin:10px 5px!important;
+margin-right:0!important;
+border:solid 1px #000;
+float:right;
+background:#7abcff;
+background:-moz-linear-gradient(top,#7abcff 0,#60abf8 44%,#4096ee 100%);
+background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#7abcff),color-stop(44%,#60abf8),color-stop(100%,#4096ee));
+background:-webkit-linear-gradient(top,#7abcff 0,#60abf8 44%,#4096ee 100%);
+background:-o-linear-gradient(top,#7abcff 0,#60abf8 44%,#4096ee 100%);
+background:-ms-linear-gradient(top,#7abcff 0,#60abf8 44%,#4096ee 100%);
+background:linear-gradient(top,#7abcff 0,#60abf8 44%,#4096ee 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7abcff',endColorstr='#4096ee',GradientType=0);
+color:#eee;
+font:100% Arial,Helvetica,sans-serif;
+text-align:center;
+text-shadow:0 1px 0 rgba(55,121,188,.5);
+text-decoration:none!important;
+vertical-align:middle;zoom:1;*display:inline;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.1),inset 0 1px 0 rgba(255,255,255,.5),inset 0 -1px 0 rgba(255,255,255,.3);-moz-box-shadow:0 1px 0 rgba(0,0,0,.1),inset 0 1px 0 rgba(255,255,255,.5),inset 0 -1px 0 rgba(255,255,255,.3);box-shadow:0 1px 0 rgba(0,0,0,.1),inset 0 1px 0 rgba(255,255,255,.5),inset 0 -1px 0 rgba(255,255,255,.3)
+    width: 100%;
+    margin-top: 8px;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+.tee:hover{background:#469cf2}
+
+
+
+@keyframes anim {
+  0%   { opacity: 0; }
+  10%  { opacity: 0; }
+  90%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+.A{
+animation-name: fadeIm-1;
+
+}
+.B{
+animation-name: fadeIm-2;
+
+}
+.C{
+animation-name: fadeIm-3;
+
+}
+.D{
+animation-name: fadeIm-4;
+
+}
+</style>
+
+
+<body>
+<table border="0" height="300" width="700" align="center" cellspacing="0" cellpadding="0">
+<tr>
+<td bgcolor="red" height="150" class="button" valign="middle"><a href="Португалия путешествие.html" class="button"><h2 align="center"><i>Маршрут по Португалии
+&#9873;</i></h2></a></td><td bgcolor="black" rowspan="2">
+<div class="div-style">
+<img src="bc4bff6c294e7a71de4c76f65526abe6e4a0e585cdd24eac9209bd61167e7b4e.jpg" alt="" class="img-style im-1" class="bottom">
+<div class="very scale">
+<div class="text">
+<p class="tee A">Вы ознакомитесь с городами Португалии.</p>
+</div>
+</div>
+<img src="Снимок.PNG" alt="" class="img-style next im-2" class="bottom">
+<div class="very scale">
+<div class="text">
+<p class="tee B">Вам будет предоставлен самый оптимальный маршрут на машине, чтобы посетить самые интересные места.</p>
+</div>
+</div>
+<img src="kafedralnyy_sobor_1.jpg" alt="" class="img-style next im-3" class="bottom">
+<div class="very scale">
+<div class="text">
+<p class="tee C">Здесь будут перечислены наиболее важные достопрмечательности самой западной страны на континенте.</p>
+</div>
+</div>
+<img src="portugalskaia-kuhnia-9.jpg" alt="" class="img-style next im-4" class="bottom">
+<div class="very scale">
+<div class="text">
+<p class="tee D">Покажем уникальные блюда этой страны.</p>
+</div>
+</div>
+
+</div>
+</td>
+</tr>
+<tr>
+<td bgcolor="green" height="150" class="button" valign="middle"><a href="Португалия кухня.html" class="button"><h2 align="center"><i>Кухня&#9749;</i></h2></a></td>
+</tr>
+</table>
+</body>
+<pre>
+
+</pre>
+<body bgcolor="00ff00" background="portugaliya-more-nebo-volny.jpg" vlink="#440076" bgproperties="fixed">
+<div>
+<table border="3"  width="1400" align="center" bgcolor="ffffff">
+<tr>
+<td>
+<h4 align="left"><a href="Португалия.html">Общая информация &#9875;</a>                      <a href="Португалия путешествие.html">Маршрут путешествия на машине &#9872;</a>                      <a href="Португалия кухня.html">Особенности кухни &#9728;</a></h4>
+<h1 align="center" >Португалия</h1>
+<p>Самое западное государство в континентальной Европе, расположенное в юго-западной части Пиренейского полуострова. На севере и востоке граничит с Испанией, на юге и западе омывается Атлантическим океаном; таким образом, это государство в целом представляет собой полуанклав, или прибрежный анклав. Название страны происходит от города Порту (лат. Portus Cale). Португалия – страна для людей, которые, прежде всего, ценят комфорт и наслаждение. Неспешно прогуливаясь португальскими улочками, можно ощутить атмосферу Франции или Испании. Здесь нет привычной для крупных туристических городов спешки.
+В стране чтят традиции, богатое историческое и архитектурное наследие, главная ценность для португальцев – семья. Конечно, жители страны умеют получать удовольствие от жизни, окружая себя комфортом и создавая его для путешественников. Если вы хотите увидеть настоящую Европу – гордую и прекрасную – приезжайте в Португалию, насладитесь ароматом эвкалиптов и апельсинов, попробуйте знаменитое португальское вино и окунитесь в атмосферу грустной музыки фаду.</p>
+
+<table border="1" align="center">
+<tr>
+<td align="center"><img src="300px-EU-Portugal_olivenza_neutral.svg.png"></td>
+</tr>
+<tr>
+<td>Местоположение Португалии на карте Европы</td>
+</tr>
+</table>
+<h2>Достопримечательности страны</h2>
+<p>Здесь будут перечислены наиболее важные достопрмечательности самой западной страны на континенте.</p>
+<h3>1. Азорские острова</h3>
+<p>На девяти островах, расположенных в центре Атлантики, царит тишина и спокойствие. Здесь нет развитой инфраструктуры, зато вдоволь китов, дельфинов и кораллов. На Азорский архипелаг едут любители пляжного отдыха, эко-туризма, дайвинга и рыбалки. В серных пещерах бьют лечебные гейзеры, а на острове Пику есть свой вулкан.</p>
+<table border="2" align="center">
+<tr>
+<td><img src="Снимок.PNG"></td><td><img src="Снимок1.PNG"></td>
+</tr>
+<tr>
+<td>Вид сверху на Азорские острова</td><td>Азорские острова на карте</td>
+</tr>
+</table>
+<h3>2. Башня Белен</h3>
+<p>Стоящий на острове реки Тежу форт является одним из символов Лиссабона. Он был построен в первой трети XVI века, в честь открытия Васко да Гамой морского пути в Индию, и попеременно использовался в качестве крепости, порохового склада, тюрьмы и таможни. В наши дни башня открыта для посещения туристами.</p>
+<table border="2" align="center">
+<tr>
+<td><img src="bashnia-belen.jpg"></td><td><img src="Снимок3.PNG"></td>
+</tr>
+<tr>
+<td>Башня Белен</td><td>Башня Белен на карте Португалии</td>
+</tr>
+</table>
+<h3>3. Алту-Дору</h3>
+<p>Винодельческий район Португалии – родина портвейна, получившего всемирную известность в XVIII столетии. Вино же в этой местности изготавливалось на протяжении последних двух тысяч лет: об этом свидетельствуют найденные в почве семена винограда и производство, датированное III-IV веком. Сегодня в долине реки Дору выпускаются как лёгкие (бордо), так и креплёные (бургундское) напитки.</p>
+<table border="2" align="center">
+<tr>
+<td><img src="Алту-дору.jpg"></td><td><img src="iO67GKH4X.jpg"></td>
+</tr>
+<tr>
+<td>Алту - Дору</td><td>Алту - Дору на карте Португалии</td>
+</tr>
+</table>
+<h3>4. Город Авейру</h3>
+<p>Португальская Венеция впервые упоминается в хрониках в 959 году. Проходящая через город река с плавающими по ней разноцветными лодками для сбора водорослей придаёт Авейре неизъяснимое очарование. Местные достопримечательности относятся к периоду Средневековья. Центр города состоит из домов, выстроенных в стиле арт-нуво.</p>
+<table border="2" align="center">
+<tr>
+<td><img src="portugal-aveiru-32837.jpg"></td><td><img src="aveyru_na_karte_portugalii.jpg"></td>
+</tr>
+<tr>
+<td>Город Авейру</td><td>Авейру на карте Португалии</td>
+</tr>
+</table>
+<h3>5. Дворец Пена</h3>
+<p>«Средневековый» дворец Пена, расположенный над городом Синтра, только на первый взгляд кажется старым. На самом деле он построен в XIX веке в популярном тогда романтическом стиле, копирующем древнюю архитектуру. Разбитый вокруг дворца парк содержит растения из разных уголков мира: австралийские папоротники, североамериканскую секвойю, средиземноморский кипарис.</p>
+<table border="2" align="center">
+<tr>
+<td><img src="palacio-de-pena-3856281.jpg"></td><td><img src="Karta-k-otchetu-ob-otdykhe-v-Sintre-v-Portugalii.jpg"></td>
+</tr>
+<tr>
+<td>Дворец Пена</td><td>Дворец Пена на карте Португалии</td>
+</tr>
+</table>
+<h3>6. Мост Васко да Гама</h3>
+<p>Самый длинный мост Европы был открыт в 1998 году. Вантовое строение, переходящее в виадук, тянется через реку Тежу на семнадцать с лишним километров. Мост состоит из семи секций и шести автомобильных полос. С 2008 года въезд по Васко да Гаме в Лиссабон – платный. На мосту разрешается развивать скорость до ста двадцати километров в час.</p>
+<table border="2" align="center">
+<tr>
+<td><img src="s1200.jpg"></td><td><img src="Lisbon11-min.jpg"></td>
+</tr>
+<tr>
+<td>Мост Васко да Гама</td><td>Мост Васко да Гама на карте Португалии</td>
+</tr>
+</table>
+<h3>7. Город-музей Эвора</h3>
+<p>Расположенная в ста тридцати километрах от Лиссабона, Эвора хранит в себе культурное наследие древних римлян и мавров. Самым старинным памятником является храм Дианы (II-III век н.э.), самым необычным – «Капелла костей», сложенная из скелетов десяти тысяч португальских христиан. Узкие улочки, многочисленные площади с фонтанами и вырастающие, словно из-под земли, арки делают Эвору настоящим музеем под открытым небом.</p>
+<table border="2" align="center"> 
+<tr>
+<td><img src="bc4bff6c294e7a71de4c76f65526abe6e4a0e585cdd24eac9209bd61167e7b4e.jpg"></td><td><img src="123844607_YEvora_na_karte.png"></td>
+</tr>
+<tr>
+<td>Город-музей Эвора</td><td>Город-музей Эвора на карте Португалии</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+
+
+
+</body>
+
+</html>
