@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.1.0
+- https://www.phpmyadmin.net
+-
+- Хост: 127.0.0.1:3306
+- Время создания: Авг 30 2021 г., 15:13
+- Версия сервера: 8.0.24
+- Версия PHP: 7.1.33
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="kalon" collation="utf8_general_ci" charset="utf8">
+            <pma:table name="tab2">
+                CREATE TABLE `показания2` (
+                  `Дата и время` datetime NOT NULL,
+                  `Название счетчика` text NOT NULL,
+                  `номер счетчика` int NOT NULL,
+                  `код квитанции` int NOT NULL,
+                  `показание` int NOT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - База данных: 'kalon'
+    -->
+    <database name="kalon">
+        <!-- Таблица показания2 -->
+        <table name="tab2">
+            <column name="Дата и время">2021-08-30 15:12:27</column>
+            <column name="Название счетчика"></column>
+            <column name="номер счетчика">0</column>
+            <column name="код квитанции">0</column>
+            <column name="показание">0</column>
+        </table>
+        <table name="tab2">
+            <column name="Дата и время">2021-08-30 15:12:27</column>
+            <column name="Название счетчика"></column>
+            <column name="номер счетчика">0</column>
+            <column name="код квитанции">0</column>
+            <column name="показание">0</column>
+        </table>
+    </database>
+</pma_xml_export>
