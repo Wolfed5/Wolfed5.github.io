@@ -1,0 +1,250 @@
+<html>
+    <head>
+    <title>Блокнот</title>
+      <meta charset="utf-8">
+<script>
+
+function saveNote()
+{
+          var name = document.getElementById('notename').value;
+          /* создание переменной, хранящей значение введенное в поле Наименование.*/
+          var content = document.getElementById('notecontent').value;
+          /* создание переменной для хранения текста самой записи*/
+          if(content == '')
+          {
+                   alert('enter valid note text');
+                   /* выводим предупреждающее сообщение, в случае, если не задан текст записи*/
+          }
+          else
+          {
+                   if (name == 0)
+                            {
+                                     alert('enter valid note name');
+                                     /* вывод предупреждающего сообщения, если не задано наименование записи*/
+                            }
+                            else {localStorage[name] = content;}
+          }
+}
+
+function listLoad()
+{
+          var list = document.getElementById('notelist');
+          for(var i in localStorage)
+          {
+
+                   var a = document.createElement('a'); 
+                   
+                   a.setAttribute('onclick', "loadNote('"+i+"'); return false;");
+                   a.innerText = i;
+                   var element = document.createElement('li');
+                   element.appendChild(a);
+            if(a.innerText!="length")
+            {
+                   list.appendChild(element);
+            }
+            else 
+            {
+                break;
+            }
+          }
+}
+
+function listclear()
+{
+localStorage.clear();
+
+}
+
+function loadNote(lis)
+{
+          document.getElementById('notecontent').value = localStorage[lis];
+          document.getElementById('notename').value = lis;
+}
+
+
+function deleteNote()
+{
+          var name = document.getElementById('notename').value;
+          if (name != '')
+          {
+          localStorage.removeItem(name);
+          }
+          else {alert('note not found');}
+          }
+</script>
+
+<style>
+#notes
+{
+
+          float:left;
+          width:250px;
+}
+
+
+#note
+{
+          float:left;
+          margin-left:20px;
+          border:3px solid rgb(116, 82, 55); 
+          
+}
+
+
+#footer
+{
+          clear:left;
+          text-align:center;
+          font-style:italic;
+}
+
+
+#formnote
+{
+          margin-top: 30px;
+          color: solid rgb(124, 108, 84);
+}
+
+.notestyle
+{
+    border:3px solid rgb(116, 55, 55); 
+}
+
+
+
+#notecontent, #notename
+{
+          width:450px;
+}
+
+.notebtn
+{
+          text-align:center;
+}
+
+td
+{
+          vertical-align:top;
+}
+h1, h3
+{
+          font-style:italic;
+          text-align:center;
+}
+
+
+fieldset
+{
+          border:1px dashed #CCC;
+          padding:10px;
+}
+
+
+label
+{
+          width:142px;
+          height:32px;
+          background-color:rgb(190, 154, 154);
+          float:left;
+          display: block;
+          font-family:Arial, Helvetica, sans-serif;
+          font-size: 100%;
+          letter-spacing: -1px;
+          font-weight: normal;
+          line-height: 1.1;
+          color:rgb(34, 25, 25);
+}
+.notefield
+{
+          margin-top:3px;
+          margin-right:2px;
+          padding-top:11px;
+          padding-left:6px;
+          height:32px;
+}
+
+
+a:link, a:visited
+{
+          color:#666;
+          font-style:italic;
+          font-weight:500;
+          text-decoration:none;
+          font-family:Arial, Helvetica, sans-serif;
+}
+
+a:hover, li:hover
+{
+          color:#666;
+          font-style:italic;
+          font-weight:bolder;
+          cursor: pointer;
+}
+</style>
+    
+    
+    </head>
+
+    <body onload="listLoad();">
+        <div id="header">
+            <h1>Блокнот</h1>
+        </div>
+   
+        <div id="notes" class="notestyle">
+            <h3>Список записей</h3>
+             <ol id="notelist"></ol>
+        </div>
+   
+    
+   
+        <div id="note">
+           <form id="formnote">
+   
+                  <fieldset>
+                       <table>
+                            <tr>
+                                 <td><label class="notefield">Наименование
+                                      </label></td>
+                                 <td colspan=2>
+                                      <input id="notename" type="text"
+                                           class="notefield"></input>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td><label class="notefield">Текст записи
+                                      </label></td>
+                                 <td colspan=2>
+                                      <textarea id="notecontent" rows=10></textarea>
+                                 </td>
+                            </tr>
+   
+                            <tr>
+                                <td></td>
+                                <td class="notebtn"><button id="save"
+                                        type="submit" onclick="saveNote(); "
+                                        >Сохранить</button></td>
+                                <td class="notebtn"><button id="delete"
+                                        type="submit" onclick="deleteNote();"
+                                        >Удалить</button></td>
+                                        <td class="notebtn"><button id="clear"
+                                            type="submit" onclick="listclear();"
+                                            >Очистить список</button></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </form>
+                </div>
+   
+                <div id="footer">
+                        <button><a href="index3.html">Next</a></button>
+                        <p class="footertext">2022 г.</p>
+                </div>
+                <table>
+                    <tr>
+                    <td ><button onclick="history.back()">Предыдущее</button></td>
+                    <td ><button onclick="history.forward()">Следующее</button></td>
+                    </tr>
+        </table>
+       </body>
+
+</html>

@@ -1,0 +1,102 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <LINK rel="stylesheet" type="text/css" href="css/main.css">
+  <script type="text/javascript" src="script4.js"></script>
+<title>Анкета</title>
+</head>
+<style>
+
+.element {
+border: 2px solid black;
+border-radius: 6px 10px 6px 10px;
+height: 25 px;
+width: 75x;
+margin-left:20px;
+margin-bottom: 10px;
+text-align:center;
+}
+
+
+.conteiner {
+border: 2px solid red;
+height: 200px;
+width: 100px;
+float:center;
+margin: 50px;
+}
+
+
+</style>
+
+
+<body>
+  <table border="5px">
+    <tr>
+      <td>
+         <p>Варианты</p>
+      </td>
+      <td>
+         <p>Птицы</p>
+      </td>
+      <td>
+         <p>Рыбы</p>
+      </td>
+      <td>
+         <p>Приматы</p>
+      </td>
+    </tr>
+    <tr>
+
+   <td>
+  <div id="source1" class="conteiner"
+
+  ondrop="dragDrop(event)" >
+  
+  <div id="firstDragElement" class="element" 
+  ondragstart="dragStart(event)" ondragend="return dragEnd(event)" draggable="true">
+  
+  Журавль</div>
+  
+  <div id="secondDragElement" class="element" 
+  ondragstart="dragStart(event)" ondragend="return dragEnd(event)" draggable="true">
+  
+  Бабуин</div>
+  
+  <div id="thirdDragElement" class="element" 
+  ondragstart="dragStart(event)" ondragend="return dragEnd(event)" draggable="true">
+  
+  Карп</div>
+  
+  </div>
+</td> 
+<td>
+  <div id="target" class="conteiner" ondragenter="return dragEnter(event)"
+  
+  ondrop="dragDrop(event)" ondragover="dragOver1(event)">
+  
+  </div>
+</td>
+<td>
+  <div id="target" class="conteiner" ondragenter="return dragEnter(event)"
+  
+  ondrop="dragDrop(event)" ondragover="dragOver2(event)">
+  
+  </div>
+</td>
+<td>
+  <div id="target" class="conteiner" ondragenter="return dragEnter(event)"
+  
+  ondrop="dragDrop(event)" ondragover="dragOver3(event)">
+  
+  </div>
+</td>
+</tr>
+</table>
+<table>
+    <tr>
+    <td ><button onclick="history.back()">Предыдущее</button></td>
+    </tr>
+</table>
+</body>
+</html>
