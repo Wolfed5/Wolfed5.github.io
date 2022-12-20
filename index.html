@@ -1,41 +1,465 @@
+<!DOCTYPE HTML>
 <html>
-<head>
-  <meta charset="utf-8">
-  <LINK rel="stylesheet" type="text/css" href="css/main.css">
-  <script type="text/javascript" src="script.js"></script>
-<title>HTML5.Работа с холстом. Элемент Canvas</title>
+    <head>
+    <title>Регистрация участников конференции</title>
+      <meta charset="utf-8">
+      <script type="text/javascript" src="script5.js"></script>
+
 </head>
 <style>
+body{
+    background-color: #a88989;
+  }
 
-canvas.F1
-{
-  background-color:rgb(166, 95, 95);
-  border:1px solid rgb(68, 54, 126);
-  border-radius: 10px 10px 10px 10px;
 
-}
-canvas.F2
+.ssr
 {
-  background-color:rgb(46, 94, 148);
-  border:1px solid rgb(68, 54, 126);
-  border-radius: 10px 10px 10px 10px;
+  width:500px;
+  padding:20px;
+  margin: center;
+  border-radius: 5px 5px 5px 5px;
+  border: 2px solid rgb(128, 107, 107);
+  background-color: rgb(250, 250, 250)
 }
+
+
+.reating-arkows {
+  position: relative;
+}
+.reating-arkows *, .reating-arkows *:before, .reating-arkows *:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor:pointer;
+}
+.reating-arkows input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.reating-arkows input[type="checkbox"][disabled] ~ label {
+  pointer-events: none;
+}
+.reating-arkows input[type="checkbox"][disabled] ~ label .trianglesusing {
+  opacity: 0.4;
+}
+.reating-arkows input[type="checkbox"]:checked ~ label .trianglesusing:before {
+  content: attr(data-unchecked);
+  left: 0;
+}
+.reating-arkows input[type="checkbox"]:checked ~ label .trianglesusing:after {
+  content: attr(data-checked);
+}
+.reating-arkows label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.reating-arkows label .moresharpened {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-left: 32px;
+}
+.reating-arkows label .trianglesusing {
+  position: relative;
+}
+.reating-arkows label .trianglesusing:before {
+  content: attr(data-checked);
+  position: absolute;
+  top: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.reating-arkows label .trianglesusing:after {
+  content: attr(data-unchecked);
+  position: absolute;
+  z-index: 5;
+  text-transform: uppercase;
+  text-align: center;
+  background: white;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.reating-arkows input[type="checkbox"][disabled] ~ label {
+  color: rgba(119, 119, 119, 0.5);
+}
+.reating-arkows input[type="checkbox"]:focus ~ label .trianglesusing, .reating-arkows input[type="checkbox"]:hover ~ label .trianglesusing {
+  background-color: #696464;
+}
+.reating-arkows input[type="checkbox"]:focus ~ label .trianglesusing:after, .reating-arkows input[type="checkbox"]:hover ~ label .trianglesusing:after {
+  color: #484242;
+}
+.reating-arkows input[type="checkbox"]:hover ~ label {
+  color: #615b5b;
+}
+.reating-arkows input[type="checkbox"]:checked ~ label:hover {
+  color: #38962d;
+}
+.reating-arkows input[type="checkbox"]:checked ~ label .trianglesusing {
+  background-color: #46963e;
+}
+.reating-arkows input[type="checkbox"]:checked ~ label .trianglesusing:after {
+  color: #388e2e;
+}
+.reating-arkows input[type="checkbox"]:checked:focus ~ label .trianglesusing, .reating-arkows input[type="checkbox"]:checked:hover ~ label .trianglesusing {
+  background-color: #45a53a;
+}
+.reating-arkows input[type="checkbox"]:checked:focus ~ label .trianglesusing:after, .reating-arkows input[type="checkbox"]:checked:hover ~ label .trianglesusing:after {
+  color: #39942f;
+}
+.reating-arkows label .moresharpened {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.reating-arkows label .trianglesusing {
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+  transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+  background: #736d6d;
+}
+.reating-arkows label .trianglesusing:before {
+  color: rgba(255, 255, 255, 0.5);
+}
+.reating-arkows label .trianglesusing:after {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 1, 0.5, 1);
+  transition: transform 0.3s cubic-bezier(0, 1, 0.5, 1);
+  color: #6b6565;
+}
+.reating-arkows input[type="checkbox"]:focus ~ label .trianglesusing:after, .reating-arkows input[type="checkbox"]:hover ~ label .trianglesusing:after {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+}
+.reating-arkows input[type="checkbox"]:checked ~ label .trianglesusing:after {
+  -webkit-transform: translate3d(65px, 0, 0);
+  transform: translate3d(65px, 0, 0);
+}
+.reating-arkows input[type="checkbox"]:checked:focus ~ label .trianglesusing:after, .reating-arkows input[type="checkbox"]:checked:hover ~ label .trianglesusing:after {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+}
+.reating-arkows label {
+  font-size: 14px;
+}
+.reating-arkows label .trianglesusing {
+  height: 36px;
+  -webkit-flex: 0 0 134px;
+  -ms-flex: 0 0 134px;
+  flex: 0 0 134px;
+  border-radius: 4px;
+}
+.reating-arkows label .trianglesusing:before {
+  left: 67px;
+  font-size: 12px;
+  line-height: 36px;
+  width: 67px;
+  padding: 0 12px;
+}
+.reating-arkows label .trianglesusing:after {
+  top: 2px;
+  left: 2px;
+  border-radius: 2px;
+  width: 65px;
+  line-height: 32px;
+  font-size: 12px;
+}
+.reating-arkows label .trianglesusing:hover:after {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+}
+.reating-arkows.twokadjacent input[type="checkbox"]:focus ~ label .trianglesusing:after, .reating-arkows.twokadjacent input[type="checkbox"]:hover ~ label .trianglesusing:after {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+.reating-arkows.twokadjacent input[type="checkbox"]:checked ~ label .trianglesusing:after {
+  -webkit-transform: translate3d(44px, 0, 0);
+  transform: translate3d(44px, 0, 0);
+}
+.reating-arkows.twokadjacent input[type="checkbox"]:checked:focus ~ label .trianglesusing:after, .reating-arkows.twokadjacent input[type="checkbox"]:checked:hover ~ label .trianglesusing:after {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+.reating-arkows.twokadjacent label {
+  font-size: 13px;
+}
+.reating-arkows.twokadjacent label .trianglesusing {
+  height: 28px;
+  -webkit-flex: 0 0 90px;
+  -ms-flex: 0 0 90px;
+  flex: 0 0 90px;
+  border-radius: 2px;
+}
+.reating-arkows.twokadjacent label .trianglesusing:before {
+  left: 45px;
+  font-size: 10px;
+  line-height: 28px;
+  width: 45px;
+  padding: 0 12px;
+}
+.reating-arkows.twokadjacent label .trianglesusing:after {
+  top: 1px;
+  left: 1px;
+  border-radius: 1px;
+  width: 44px;
+  line-height: 26px;
+  font-size: 10px;
+}
+.reating-arkows.twokadjacent label .trianglesusing:hover:after {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+.reating-arkows.transparentin input[type="checkbox"]:focus ~ label .trianglesusing:after, .reating-arkows.transparentin input[type="checkbox"]:hover ~ label .trianglesusing:after {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+.reating-arkows.transparentin input[type="checkbox"]:checked ~ label .trianglesusing:after {
+  -webkit-transform: translate3d(78px, 0, 0);
+  transform: translate3d(78px, 0, 0);
+}
+.reating-arkows.transparentin input[type="checkbox"]:checked:focus ~ label .trianglesusing:after, .reating-arkows.transparentin input[type="checkbox"]:checked:hover ~ label .trianglesusing:after {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+.reating-arkows.transparentin label {
+  font-size: 14px;
+}
+.reating-arkows.transparentin label .trianglesusing {
+  height: 50px;
+  -webkit-flex: 0 0 160px;
+  -ms-flex: 0 0 160px;
+  flex: 0 0 160px;
+  border-radius: 4px;
+}
+.reating-arkows.transparentin label .trianglesusing:before {
+  left: 80px;
+  font-size: 14px;
+  line-height: 50px;
+  width: 80px;
+  padding: 0 12px;
+}
+.reating-arkows.transparentin label .trianglesusing:after {
+  top: 2px;
+  left: 2px;
+  border-radius: 2px;
+  width: 78px;
+  line-height: 46px;
+  font-size: 14px;
+}
+.reating-arkows.transparentin label .trianglesusing:hover:after {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+.reating-arkows.imagexplains input[type="checkbox"][disabled] ~ label {
+  color: rgba(181, 62, 116, 0.5);
+}
+.reating-arkows.imagexplains input[type="checkbox"]:focus ~ label .trianglesusing, .reating-arkows.imagexplains input[type="checkbox"]:hover ~ label .trianglesusing {
+  background-color: #b53e74;
+}
+.reating-arkows.imagexplains input[type="checkbox"]:focus ~ label .trianglesusing:after, .reating-arkows.imagexplains input[type="checkbox"]:hover ~ label .trianglesusing:after {
+  color: #82224d;
+}
+.reating-arkows.imagexplains input[type="checkbox"]:hover ~ label {
+  color: #8e2a58;
+}
+.reating-arkows.imagexplains input[type="checkbox"]:checked ~ label:hover {
+  color: #2d825c;
+}
+.reating-arkows.imagexplains input[type="checkbox"]:checked ~ label .trianglesusing {
+  background-color: #379a6e;
+}
+.reating-arkows.imagexplains input[type="checkbox"]:checked ~ label .trianglesusing:after {
+  color: #368a65;
+}
+.reating-arkows.imagexplains input[type="checkbox"]:checked:focus ~ label .trianglesusing, .reating-arkows.imagexplains input[type="checkbox"]:checked:hover ~ label .trianglesusing {
+  background-color: #3d9c72;
+}
+.reating-arkows.imagexplains input[type="checkbox"]:checked:focus ~ label .trianglesusing:after, .reating-arkows.imagexplains input[type="checkbox"]:checked:hover ~ label .trianglesusing:after {
+  color: #2f7757;
+}
+.reating-arkows.imagexplains label .moresharpened {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.reating-arkows.imagexplains label .trianglesusing {
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  background: #c14b81;
+}
+.reating-arkows.imagexplains label .trianglesusing:before {
+  color: rgba(255, 255, 255, 0.6);
+}
+.reating-arkows.imagexplains label .trianglesusing:after {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  color: #b53e74;
+}
+.reating-arkows.zatujgdsanuk input[type="checkbox"][disabled] ~ label {
+  color: rgba(68, 68, 68, 0.5);
+}
+.reating-arkows.zatujgdsanuk input[type="checkbox"]:focus ~ label .trianglesusing, .reating-arkows.zatujgdsanuk input[type="checkbox"]:hover ~ label .trianglesusing {
+  background-color: #444;
+}
+.reating-arkows.zatujgdsanuk input[type="checkbox"]:focus ~ label .trianglesusing:after, .reating-arkows.zatujgdsanuk input[type="checkbox"]:hover ~ label .trianglesusing:after {
+  color: #2b2b2b;
+}
+.reating-arkows.zatujgdsanuk input[type="checkbox"]:hover ~ label {
+  color: #373737;
+}
+.reating-arkows.zatujgdsanuk input[type="checkbox"]:checked ~ label:hover {
+  color: #62b125;
+}
+.reating-arkows.zatujgdsanuk input[type="checkbox"]:checked ~ label .trianglesusing {
+  background-color: #75d32d;
+}
+.reating-arkows.zatujgdsanuk input[type="checkbox"]:checked ~ label .trianglesusing:after {
+  color: #5da924;
+}
+.reating-arkows.zatujgdsanuk input[type="checkbox"]:checked:focus ~ label .trianglesusing, .reating-arkows.zatujgdsanuk input[type="checkbox"]:checked:hover ~ label .trianglesusing {
+  background-color: #69be28;
+}
+.reating-arkows.zatujgdsanuk input[type="checkbox"]:checked:focus ~ label .trianglesusing:after, .reating-arkows.zatujgdsanuk input[type="checkbox"]:checked:hover ~ label .trianglesusing:after {
+  color: #52941f;
+}
+.reating-arkows.zatujgdsanuk label .moresharpened {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.reating-arkows.zatujgdsanuk label .trianglesusing {
+  -webkit-transition: background-color 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: background-color 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  background: #515151;
+}
+.reating-arkows.zatujgdsanuk label .trianglesusing:before {
+  color: rgba(255, 255, 255, 0.7);
+}
+.reating-arkows.zatujgdsanuk label .trianglesusing:after {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  color: #444;
+}
+.reating-arkows.zatujgdsanuk input[type="checkbox"]:focus ~ label .trianglesusing:after, .reating-arkows.zatujgdsanuk input[type="checkbox"]:hover ~ label .trianglesusing:after {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+.reating-arkows.zatujgdsanuk input[type="checkbox"]:checked ~ label .trianglesusing:after {
+  -webkit-transform: translate3d(28px, 0, 0);
+  transform: translate3d(28px, 0, 0);
+}
+.reating-arkows.zatujgdsanuk input[type="checkbox"]:checked:focus ~ label .trianglesusing:after, .reating-arkows.zatujgdsanuk input[type="checkbox"]:checked:hover ~ label .trianglesusing:after {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+.reating-arkows.zatujgdsanuk label {
+  font-size: 10px;
+}
+.reating-arkows.zatujgdsanuk label .trianglesusing {
+  height: 30px;
+  -webkit-flex: 0 0 60px;
+  -ms-flex: 0 0 60px;
+  flex: 0 0 60px;
+  border-radius: 30px;
+}
+.reating-arkows.zatujgdsanuk label .trianglesusing:before {
+  left: 30px;
+  font-size: 10px;
+  line-height: 30px;
+  width: 30px;
+  padding: 0 12px;
+}
+.reating-arkows.zatujgdsanuk label .trianglesusing:after {
+  top: 2px;
+  left: 2px;
+  border-radius: 30px;
+  width: 28px;
+  line-height: 26px;
+  font-size: 10px;
+  
+}
+.reating-arkows.zatujgdsanuk label .trianglesusing:hover:after {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
 
 </style>
-<body>
-<canvas id="mycanvas" class="F1" width="700" ></canvas></br>
-<canvas id="mycanvas1" class="F2"></canvas>
 
+    <body>
+        <div id="header">
+            <h1>Регистрация участников конференции</h1>
+        </div>
 
-
-<script>drawShape()</script> 
-<script>createImage1()</script> 
-<button><a href="js1.html">Next</a></button>
-<table>
-  <tr>
-  <td ><button onclick="history.back()">Предыдущее</button></td>
-  <td ><button onclick="history.forward()">Следующее</button></td>
-  </tr>
-</table>
-</body>
+                    <form method="post">
+                       <table class="ssr">
+                            <tr>
+                                 <td><label class="notefield">ФИО (полностью)
+                                      </label></td>
+                                 <td colspan=2>
+                                      <label id="sl1"><input id="name" name="name" type="text" required pattern="^[А-Яа-яЁё\s]+$"
+                                           class="notefield"></input></label>
+                                 </td>
+                            </tr>
+                            <tr>
+                                <td><label class="notefield">Телефон
+                                     </label></td>
+                                <td colspan=2>
+                                    <label id="sl2"><input id="phone" name="phone" type="tel" class="notefield" value="+7"
+                                     required   pattern="\+\7\d{3}\d{3}\d{4}"  name="phone" data-ng-minlength="12" 
+                                          maxlength="12" ></input></label>
+                                </td>
+                           </tr>
+                           <tr>
+                            <td><label class="notefield">Адрес электронной почты
+                                 </label></td>
+                            <td colspan=2>
+                                <label id="sl3"><input id="Email" type="email" name="Email"
+                                 required   class="notefield"></input></label>
+                            </td>
+                       </tr>
+                       <tr>
+                        <td><label class="notefield">Список секций
+                             </label></td>
+                        <td colspan=2>
+                            <label id="sl4"> <select id="Lesson" type="text" required name="Lesson"
+                                  class="notefield">
+                                  <option value=""></option>
+                                  <option value="математика">математика</option>
+                                  <option value="физика">физика</option>
+                                  <option value="информатика">информатика</option>
+                                </select></label>
+                        </td>
+                   </tr>
+                   <tr>
+                    <td><label class="notefield">дата рождения
+                         </label></td>
+                    <td colspan=2>
+                        <label id="sl5"><input id="datarog" name="daterog" type="date"
+                              class="notefield"></input></label>
+                    </td>
+               </tr>
+               <tr>
+                <td><label class="notefield">доклад
+                     </label></td>
+                <td >
+                    <div class="reating-arkows zatujgdsanuk">
+                        <input id="e" type="checkbox"  onchange="myFunction()">
+                        <label for="e">
+                        <div class="trianglesusing" data-checked="да" data-unchecked="нет"></div>
+                        </label>
+                </td>
+                <td>
+                    <label id="sl6">
+                    <input id="Sol" hidden type="text" class="notefield" name="Sol"></input>
+                    </label>
+                </td>
+           </tr>
+   
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input type="button" value="Отправить" onclick="addreg()"/></td>
+                                </tr>
+                            </table>
+                          </form>
+                <div id="footer">
+                        <p class="footertext">2022 г.</p>
+                </div>
+    </body>
 </html>

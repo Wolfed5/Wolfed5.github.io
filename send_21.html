@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <title>Регистрация участников конференции</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="index.html">
+      <script type="text/javascript" src="script5.js"></script>
+
+</head>
+<style>
+body{
+    background-color: #ddbcbc;
+  }
+
+
+.ssr
+{
+  width:500px;
+  padding:20px;
+  margin: center;
+  border-radius: 5px 5px 5px 5px;
+  border: 2px solid rgb(128, 107, 107);
+  background-color: rgb(250, 250, 250)
+}
+.sst
+{
+    background-color: #85b1e4; 
+    width:800px;
+  padding:20px;
+  margin: center;
+  border-radius: 5px 5px 5px 5px;
+  border: 5px solid rgb(92, 207, 169);
+}
+
+</style>
+<script>
+    
+
+window.onload = function(){
+    if(localStorage.getItem("flag")){
+document.getElementById("sl1").innerHTML=localStorage.getItem("sil1");
+document.getElementById("sl2").innerHTML=localStorage.getItem("sil2");
+document.getElementById("sl3").innerHTML=localStorage.getItem("sil3");
+document.getElementById("sl4").innerHTML=localStorage.getItem("sil4");
+document.getElementById("sl5").innerHTML=localStorage.getItem("sil5");
+document.getElementById("sl6").innerHTML=localStorage.getItem("sil6");
+    }
+    else{
+        document.getElementsByClassName("page").item(0).innerHTML+="Ошибочка";
+        
+    }
+}
+</script>
+    
+    <body>
+        <div class="page">
+            <table>
+                <tr>
+                    <td><a href="index.html"><input type="button" value="Регистрация участника"></a></td>
+                    <td><a href=""><input type="button" value="Список участников"></td>
+                    <td></td>
+
+                </tr>
+            </table>
+            <div style="font-size: 2em;">Регистрация завершена</div>
+            <form action="">
+            <table border="1" width="100%" cellpadding="5" class="sst">
+            <tr>
+            <th>ФИО</th>
+            <th>Телефон</th>
+            <th>Электронная почта</th>
+            <th>Направление</th>
+            <th>Дата рождения</th>
+            <th>Тема доклада</th>
+            </tr>
+            <tr>
+            <td><label id="sl1"></label></td>
+            <td><label id="sl2"></label></td>
+            <td><label id="sl3"></label></td>
+            <td><label id="sl4"></label></td>
+            <td><label id="sl5"></label></td>
+            <td><label id="sl6"></label></td>
+                </tr>
+            </table>
+        </form>
+            <label id="sl1"></label><br>
+            <label id="sl2"></label><br>
+            <label id="sl3"></label><br>
+            <label id="sl4"></label><br>
+            <label id="sl5"></label><br>
+            <label id="sl6"></label>
+    </body>
+</html>
